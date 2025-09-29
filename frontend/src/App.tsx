@@ -100,13 +100,13 @@ function App() {
   const [activeTab, setActiveTab] = useState<'info' | 'order' | 'subscription' | 'positions' | 'orderbook'>('info')
 
   return (
-    <div className="min-h-screen bg-black text-white font-mono relative overflow-hidden">
+    <div className="min-h-screen bg-[var(--hl-bg)] text-[var(--hl-text)] font-mono relative overflow-hidden">
       <AbstractGrid />
       <TypographicArt />
 
 
       {/* Main Header */}
-      <div className="text-center py-8 border-b border-zinc-800 relative">
+      <div className="text-center py-8 border-b" style={{ borderColor: 'var(--hl-border-1)' }}>
         <div className="absolute top-4 left-1/2 transform -translate-x-1/2 opacity-10">
           <svg width="200" height="40" viewBox="0 0 200 40">
             <line x1="0" y1="20" x2="200" y2="20" stroke="white" strokeWidth="1" />
@@ -144,9 +144,10 @@ function App() {
           onClick={() => setActiveTab('info')}
           className={`px-8 py-2 text-xs tracking-wider transition-all duration-300 border-r border-zinc-700 ${
             activeTab === 'info' 
-              ? 'bg-white text-black' 
-              : 'bg-transparent text-zinc-400 hover:bg-zinc-800 hover:text-white'
+              ? 'text-black' 
+              : 'bg-transparent text-zinc-400 hover:text-white'
           }`}
+          style={activeTab === 'info' ? { backgroundColor: 'var(--hl-accent)' } : {}}
         >
           {"INFO_QUERIES".split("").map((letter, i) => (
             <InteractiveLetters key={i}>{letter === "_" ? "\u00A0" : letter}</InteractiveLetters>
@@ -156,9 +157,10 @@ function App() {
           onClick={() => setActiveTab('positions')}
           className={`px-8 py-2 text-xs tracking-wider transition-all duration-300 border-r border-zinc-700 ${
             activeTab === 'positions' 
-              ? 'bg-white text-black' 
-              : 'bg-transparent text-zinc-400 hover:bg-zinc-800 hover:text-white'
+              ? 'text-black' 
+              : 'bg-transparent text-zinc-400 hover:text-white'
           }`}
+          style={activeTab === 'positions' ? { backgroundColor: 'var(--hl-accent)' } : {}}
         >
           {"POSITIONS".split("").map((letter, i) => (
             <InteractiveLetters key={i}>{letter === "_" ? "\u00A0" : letter}</InteractiveLetters>
@@ -168,9 +170,10 @@ function App() {
           onClick={() => setActiveTab('orderbook')}
           className={`px-8 py-2 text-xs tracking-wider transition-all duration-300 border-r border-zinc-700 ${
             activeTab === 'orderbook' 
-              ? 'bg-white text-black' 
-              : 'bg-transparent text-zinc-400 hover:bg-zinc-800 hover:text-white'
+              ? 'text-black' 
+              : 'bg-transparent text-zinc-400 hover:text-white'
           }`}
+          style={activeTab === 'orderbook' ? { backgroundColor: 'var(--hl-accent)' } : {}}
         >
           {"ORDERBOOK".split("").map((letter, i) => (
             <InteractiveLetters key={i}>{letter === "_" ? "\u00A0" : letter}</InteractiveLetters>
@@ -180,9 +183,10 @@ function App() {
           onClick={() => setActiveTab('order')}
           className={`px-8 py-2 text-xs tracking-wider transition-all duration-300 border-r border-zinc-700 ${
             activeTab === 'order' 
-              ? 'bg-white text-black' 
-              : 'bg-transparent text-zinc-400 hover:bg-zinc-800 hover:text-white'
+              ? 'text-black' 
+              : 'bg-transparent text-zinc-400 hover:text-white'
           }`}
+          style={activeTab === 'order' ? { backgroundColor: 'var(--hl-accent)' } : {}}
         >
           {"PLACE_ORDER".split("").map((letter, i) => (
             <InteractiveLetters key={i}>{letter === "_" ? "\u00A0" : letter}</InteractiveLetters>
@@ -192,9 +196,10 @@ function App() {
           onClick={() => setActiveTab('subscription')}
           className={`px-8 py-2 text-xs tracking-wider transition-all duration-300 ${
             activeTab === 'subscription' 
-              ? 'bg-white text-black' 
-              : 'bg-transparent text-zinc-400 hover:bg-zinc-800 hover:text-white'
+              ? 'text-black' 
+              : 'bg-transparent text-zinc-400 hover:text-white'
           }`}
+          style={activeTab === 'subscription' ? { backgroundColor: 'var(--hl-accent)' } : {}}
         >
           {"LIVE_DATA".split("").map((letter, i) => (
             <InteractiveLetters key={i}>{letter === "_" ? "\u00A0" : letter}</InteractiveLetters>
@@ -206,7 +211,7 @@ function App() {
 
       {/* Content Area */}
       <div className="max-w-4xl mx-auto px-6 pb-12 relative">
-        <div className="bg-zinc-900 border border-zinc-700 relative">
+        <div className="border relative" style={{ backgroundColor: 'var(--hl-surface)', borderColor: 'var(--hl-border-1)' }}>
           <div className="absolute top-2 left-2 opacity-20">
             <svg width="20" height="20" viewBox="0 0 20 20">
               <path d="M0,0 L20,0 L20,20" fill="none" stroke="white" strokeWidth="1" />

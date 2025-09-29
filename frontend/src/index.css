@@ -8,8 +8,18 @@
   font-weight: 400;
 
   color-scheme: dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #000000;
+  /* Hyperliquid theme tokens */
+  --hl-accent: #A7F8E3;      /* Primary accent (mint) */
+  --hl-brand: #0B2E2B;       /* Brand deep */
+  --hl-bg: #0A0F0E;          /* Background */
+  --hl-surface: #151A19;     /* Card surface */
+  --hl-text: #F2F7F5;        /* Off-white text */
+  --hl-muted: rgba(242, 247, 245, 0.64);
+  --hl-border-1: rgba(10, 47, 43, 0.55);  /* derived from brand */
+  --hl-border-2: rgba(10, 47, 43, 0.35);
+
+  color: var(--hl-text);
+  background-color: var(--hl-bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,8 +32,8 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--hl-bg);
+  color: var(--hl-text);
   font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
 }
 
@@ -40,7 +50,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: transparent;
-  color: white;
+  color: var(--hl-text);
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
@@ -49,13 +59,13 @@ button {
 }
 
 button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: color-mix(in oklab, var(--hl-accent) 10%, transparent);
   transform: scale(1.05);
 }
 
 button:focus,
 button:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline: 2px solid color-mix(in oklab, var(--hl-accent) 60%, transparent);
   outline-offset: 2px;
 }
 
@@ -66,9 +76,9 @@ button:disabled {
 }
 
 input, textarea, select {
-  background-color: #000000;
-  border: 1px solid #404040;
-  color: white;
+  background-color: var(--hl-bg);
+  border: 1px solid var(--hl-border-2);
+  color: var(--hl-text);
   padding: 0.75rem;
   font-family: inherit;
   font-size: 0.875rem;
@@ -80,12 +90,12 @@ input, textarea, select {
 
 input:focus, textarea:focus, select:focus {
   outline: none;
-  border-color: #ffffff;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+  border-color: var(--hl-accent);
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--hl-accent) 35%, transparent);
 }
 
 input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--hl-muted);
 }
 
 label {
@@ -95,12 +105,12 @@ label {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--hl-muted);
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--hl-surface);
+  border: 1px solid var(--hl-border-2);
   margin: 1rem 0;
   position: relative;
 }
@@ -115,9 +125,9 @@ label {
 }
 
 .status.success {
-  background-color: rgba(34, 197, 94, 0.2);
-  color: #22c55e;
-  border: 1px solid rgba(34, 197, 94, 0.3);
+  background-color: color-mix(in oklab, var(--hl-accent) 12%, transparent);
+  color: var(--hl-accent);
+  border: 1px solid color-mix(in oklab, var(--hl-accent) 30%, transparent);
 }
 
 .status.error {
@@ -139,8 +149,8 @@ label {
 }
 
 .log {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--hl-border-2);
   padding: 1rem;
   font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
   font-size: 0.875rem;
