@@ -1,4 +1,6 @@
-# hyperdemo — Hyperliquid Testnet Demo
+# hyperdemo — Hyperliquid Plug‑and‑Play SDK
+
+Drop‑in demo showcasing how to use the Hyperliquid TypeScript SDK in a real app.
 
 A clean, modern React + Vite frontend that demonstrates practical usage of the Hyperliquid TypeScript SDK on testnet, with a focus on reliability, clarity, and developer experience.
 
