@@ -241,9 +241,9 @@ function App() {
           <p className="mb-4 text-sm" style={{ color: 'var(--hl-muted)' }}>
             Want to plug this into your own project?
           </p>
-          <div className="flex items-center justify-center gap-3 flex-wrap">
+          <div className="flex items-center justify-center gap-4 flex-wrap">
             <a
-              className="inline-flex items-center gap-2 px-4 py-2 rounded border text-xs tracking-wider transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border text-sm md:text-base font-semibold tracking-wider transition-colors"
               style={{
                 borderColor: 'var(--hl-border-1)',
                 color: 'var(--hl-text)'
@@ -256,9 +256,9 @@ function App() {
             >
               <span>Fork this repo</span>
             </a>
-            <span className="text-xs" style={{ color: 'var(--hl-border-1)' }}>or</span>
+            <span className="text-sm md:text-base" style={{ color: 'var(--hl-border-1)' }}>or</span>
             <a
-              className="inline-flex items-center gap-2 px-4 py-2 rounded border text-xs tracking-wider transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border text-sm md:text-base font-semibold tracking-wider transition-colors"
               style={{
                 borderColor: 'var(--hl-border-1)',
                 color: 'var(--hl-text)'
