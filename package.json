@@ -11,7 +11,7 @@
     "subs": "ts-node-esm src/subscribe.ts"
   },
   "dependencies": {
-    "@nktkas/hyperliquid": "^0.1.0",
+    "hyperliquid": "^1.7.7",
     "dotenv": "^16.0.0"
   },
   "devDependencies": {
