@@ -60,24 +60,13 @@ Open the local URL from the terminal output.
 
 ## Screenshots
 
-Add your PNG/JPG files into `screenshots/` (filenames below). The README will render them automatically.
+Images live in `screenshots/`:
 
-![Info Panel — Open Orders](screenshots/info-open-orders.png)
-_Open orders fetched via HTTP, displayed with the built‑in JSON viewer._
-
-![Positions Panel](screenshots/positions.png)
-_Aggregated positions with ROE, uPnL, liq price, and margin metrics._
-
-![Orderbook Panel](screenshots/orderbook.png)
-_Top 15 bids/asks rendered in tables, data from `getL2Book`/`getOrderbook`._
-
-![Place Order Panel](screenshots/order-place.png)
-_Safe testnet order placement; key is read from `.env` only._
-
-![Live Data Panel](screenshots/subscription-live-snapshot.png)
-_WebSocket live feed with pagination + 5‑minute HTTP snapshot of mids._
-
-Optionally include a landing screenshot as `screenshots/home.png`.
+![Info Panel — Open Orders](screenshots/info-open-orders.jpeg)
+![Order Panel — Place Order](screenshots/order-place.jpeg)
+![Subscription Panel — Live + Snapshot](screenshots/subscription-live-snapshot.jpeg)
+![Positions Panel](screenshots/positions.jpeg)
+![Orderbook Panel](screenshots/orderbook.jpeg)
 
 Tip: On macOS, capture window screenshots with `Shift+Cmd+4`, then Space.
 
