@@ -97,14 +97,17 @@ const HeaderLogo: React.FC = () => {
       <svg
         width="56"
         height="56"
-        viewBox="0 0 576 576"
+        viewBox="0 0 640 640"
         xmlns="http://www.w3.org/2000/svg"
         aria-label="HyperDemo logo"
+        style={{ overflow: 'visible' }}
       >
-        <path
-          d="M94 432c-52 0-94-86-94-192S42 48 94 48c62 0 86 112 196 112s126-224 246-160c84 43 140 204 114 336-18 91-91 168-170 168-119 0-116-168-236-168-88 0-94 64-150 96z"
-          fill="#ffffff"
-        />
+        <g transform="translate(16,16) scale(0.92)">
+          <path
+            d="M94 432c-52 0-94-86-94-192S42 48 94 48c62 0 86 112 196 112s126-224 246-160c84 43 140 204 114 336-18 91-91 168-170 168-119 0-116-168-236-168-88 0-94 64-150 96z"
+            fill="#ffffff"
+          />
+        </g>
       </svg>
     )
   }
@@ -147,9 +150,9 @@ function App() {
             <rect x="110" y="15" width="10" height="10" fill="none" stroke="white" strokeWidth="1" />
           </svg>
         </div>
-        <div className="flex items-center justify-center gap-4 mb-2">
+        <div className="flex items-center justify-center gap-4 mb-2 px-4">
           <HeaderLogo />
-          <h1 className="text-2xl md:text-3xl font-bold tracking-wider">
+          <h1 className="text-2xl md:text-3xl font-bold tracking-wider whitespace-nowrap">
             HyperDemo
           </h1>
         </div>
