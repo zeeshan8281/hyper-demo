@@ -1,5 +1,5 @@
 import "dotenv/config";
-import * as hl from "@nktkas/hyperliquid";
+import * as hl from "hyperliquid";
 import { requireTestnet, assertUrlIsTestnet } from "./utils";
 
 async function main() {
