@@ -114,13 +114,26 @@ function App() {
             <rect x="110" y="15" width="10" height="10" fill="none" stroke="white" strokeWidth="1" />
           </svg>
         </div>
-        <h1 className="text-2xl font-bold tracking-wider mb-2">
-          {"HYPERLIQUID_DEMO".split("").map((letter, i) => (
-            <InteractiveLetters key={i} className="opacity-90">
-              {letter === "_" ? "\u00A0" : letter}
-            </InteractiveLetters>
-          ))}
-        </h1>
+        <div className="flex items-center justify-center gap-4 mb-2">
+          <img
+            src="/logo.png"
+            alt="HyperDemo logo"
+            className="h-12 md:h-14"
+            style={{ filter: 'drop-shadow(0 0 6px rgba(167,248,227,0.15))' }}
+            onError={(e) => {
+              const img = e.currentTarget as HTMLImageElement
+              if (!img.src.endsWith('/logo-white.png')) {
+                img.src = '/logo-white.png'
+              }
+            }}
+          />
+          <h1 className="text-2xl md:text-3xl font-bold tracking-wider">
+            HyperDemo
+          </h1>
+        </div>
+        <div className="text-xs md:text-sm tracking-wide" style={{ color: 'var(--hl-muted)' }}>
+          Hyperliquid Plug n' Play SDK
+        </div>
       </div>
 
       {/* Environment Error Display */}
