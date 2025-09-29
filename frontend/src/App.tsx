@@ -236,25 +236,43 @@ function App() {
       </div>
 
       {/* Global Footer */}
-      <footer className="w-full border-t border-zinc-800 py-6 mt-8 text-center text-xs text-zinc-400">
-        <span className="mr-2">Want to plug this into your own project?</span>
-        <a
-          className="underline hover:text-white"
-          href="https://github.com/zeeshan8281/hyper-demo"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Fork this here
-        </a>
-        <span className="mx-2">•</span>
-        <a
-          className="underline hover:text-white"
-          href="https://github.com/zeeshan8281/hyper-demo/fork"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          or clone the repo
-        </a>
+      <footer className="w-full py-8 mt-10 text-center" style={{ borderTop: '1px solid var(--hl-border-1)' }}>
+        <div className="max-w-4xl mx-auto px-6">
+          <p className="mb-4 text-sm" style={{ color: 'var(--hl-muted)' }}>
+            Want to plug this into your own project?
+          </p>
+          <div className="flex items-center justify-center gap-3 flex-wrap">
+            <a
+              className="inline-flex items-center gap-2 px-4 py-2 rounded border text-xs tracking-wider transition-colors"
+              style={{
+                borderColor: 'var(--hl-border-1)',
+                color: 'var(--hl-text)'
+              }}
+              href="https://github.com/zeeshan8281/hyper-demo/fork"
+              target="_blank"
+              rel="noreferrer noopener"
+              onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--hl-accent)'; (e.currentTarget as HTMLAnchorElement).style.color = '#0A0F0E'; }}
+              onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'transparent'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--hl-text)'; }}
+            >
+              <span>Fork this repo</span>
+            </a>
+            <span className="text-xs" style={{ color: 'var(--hl-border-1)' }}>or</span>
+            <a
+              className="inline-flex items-center gap-2 px-4 py-2 rounded border text-xs tracking-wider transition-colors"
+              style={{
+                borderColor: 'var(--hl-border-1)',
+                color: 'var(--hl-text)'
+              }}
+              href="https://github.com/zeeshan8281/hyper-demo"
+              target="_blank"
+              rel="noreferrer noopener"
+              onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--hl-accent)'; (e.currentTarget as HTMLAnchorElement).style.color = '#0A0F0E'; }}
+              onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'transparent'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--hl-text)'; }}
+            >
+              <span>View on GitHub</span>
+            </a>
+          </div>
+        </div>
       </footer>
     </div>
   )
