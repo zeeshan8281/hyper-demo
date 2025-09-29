@@ -58,6 +58,21 @@ Open the local URL from the terminal output.
 
 ---
 
+## Screenshots
+
+Drop PNG/JPG files into `screenshots/` and they will auto‑render below.
+
+![App — Home](screenshots/home.png)
+![Info Panel — Open Orders](screenshots/info-open-orders.png)
+![Order Panel — Place Order](screenshots/order-place.png)
+![Subscription Panel — Live + Snapshot](screenshots/subscription-live-snapshot.png)
+![Positions Panel](screenshots/positions.png)
+![Orderbook Panel](screenshots/orderbook.png)
+
+Tip: On macOS, capture window screenshots with `Shift+Cmd+4`, then Space.
+
+---
+
 ## Scripts
 
 Frontend (in `frontend/`):
