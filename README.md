@@ -63,10 +63,15 @@ Open the local URL from the terminal output.
 Images live in `screenshots/`:
 
 ![Info Panel — Open Orders](screenshots/info-open-orders.jpeg)
+_Open orders fetched via HTTP, rendered with the collapsible JsonView._
 ![Order Panel — Place Order](screenshots/order-place.jpeg)
+_Safe testnet order placement. Private key is read from env only._
 ![Subscription Panel — Live + Snapshot](screenshots/subscription-live-snapshot.jpeg)
+_WebSocket event feed with pagination + 5‑minute HTTP mids snapshot._
 ![Positions Panel](screenshots/positions.jpeg)
+_Aggregated positions with size, entry, uPnL, ROE, liq px, and margins._
 ![Orderbook Panel](screenshots/orderbook.jpeg)
+_Top 15 bids/asks tables from `getL2Book`/`getOrderbook` with raw JSON below._
 
 Tip: On macOS, capture window screenshots with `Shift+Cmd+4`, then Space.
 

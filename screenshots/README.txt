@@ -1,1 +1,6 @@
-(place screenshots here: home.png, info-open-orders.png, order-place.png, subscription-live-snapshot.png, positions.png, orderbook.png)
+Screenshots used in README (actual files committed):
+ - info-open-orders.jpeg
+ - order-place.jpeg
+ - subscription-live-snapshot.jpeg
+ - positions.jpeg
+ - orderbook.jpeg
