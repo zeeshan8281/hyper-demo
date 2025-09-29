@@ -229,6 +229,28 @@ function App() {
 
         <GeometricLines />
       </div>
+
+      {/* Global Footer */}
+      <footer className="w-full border-t border-zinc-800 py-6 mt-8 text-center text-xs text-zinc-400">
+        <span className="mr-2">Want to plug this into your own project?</span>
+        <a
+          className="underline hover:text-white"
+          href="https://github.com/zeeshan8281/hyper-demo"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Fork this here
+        </a>
+        <span className="mx-2">•</span>
+        <a
+          className="underline hover:text-white"
+          href="https://github.com/zeeshan8281/hyper-demo/fork"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          or clone the repo
+        </a>
+      </footer>
     </div>
   )
 }
