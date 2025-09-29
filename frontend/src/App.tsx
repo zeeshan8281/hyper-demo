@@ -89,6 +89,39 @@ const GeometricLines = () => (
   </div>
 )
 
+// Header Logo with graceful fallback
+const HeaderLogo: React.FC = () => {
+  const [failed, setFailed] = useState(false)
+  if (failed) {
+    return (
+      <svg
+        width="56"
+        height="56"
+        viewBox="0 0 576 576"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-label="HyperDemo logo"
+      >
+        <path
+          d="M94 432c-52 0-94-86-94-192S42 48 94 48c62 0 86 112 196 112s126-224 246-160c84 43 140 204 114 336-18 91-91 168-170 168-119 0-116-168-236-168-88 0-94 64-150 96z"
+          fill="#ffffff"
+        />
+      </svg>
+    )
+  }
+  return (
+    <img
+      src="/logo.png"
+      alt="HyperDemo logo"
+      className="h-12 md:h-14"
+      style={{ filter: 'drop-shadow(0 0 6px rgba(167,248,227,0.15))' }}
+      onError={() => {
+        console.warn('[logo] /logo.png not found. Rendering SVG fallback. Place your file at frontend/public/logo.png')
+        setFailed(true)
+      }}
+    />
+  )
+}
+
 function App() {
   // Check environment configuration on app start
   let envError = ''
@@ -115,18 +148,7 @@ function App() {
           </svg>
         </div>
         <div className="flex items-center justify-center gap-4 mb-2">
-          <img
-            src="/logo.png"
-            alt="HyperDemo logo"
-            className="h-12 md:h-14"
-            style={{ filter: 'drop-shadow(0 0 6px rgba(167,248,227,0.15))' }}
-            onError={(e) => {
-              const img = e.currentTarget as HTMLImageElement
-              if (!img.src.endsWith('/logo-white.png')) {
-                img.src = '/logo-white.png'
-              }
-            }}
-          />
+          <HeaderLogo />
           <h1 className="text-2xl md:text-3xl font-bold tracking-wider">
             HyperDemo
           </h1>
