@@ -1,0 +1,24 @@
+{
+  "name": "hyperliquid-demo-ts",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/index.js",
+    "dev": "ts-node-esm src/index.ts",
+    "info": "ts-node-esm src/info.ts",
+    "order": "ts-node-esm src/placeOrder.ts",
+    "subs": "ts-node-esm src/subscribe.ts"
+  },
+  "dependencies": {
+    "@nktkas/hyperliquid": "^0.1.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.0"
+  }
+}
+
+
+

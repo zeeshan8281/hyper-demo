@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hyperliquid Demo - Testnet Only</title>
+    <script src="/node_modules/hyperliquid/dist/browser.global.js"></script>
+    <script>
+      // Wait for the script to load and expose HyperliquidSDK to global scope
+      window.addEventListener('load', function() {
+        if (typeof HyperliquidSDK !== 'undefined' && HyperliquidSDK.Hyperliquid) {
+          window.HyperliquidSDK = HyperliquidSDK.Hyperliquid;
+          console.log('✅ HyperliquidSDK loaded successfully:', typeof window.HyperliquidSDK);
+        } else {
+          console.error('❌ HyperliquidSDK failed to load');
+          console.log('HyperliquidSDK:', typeof HyperliquidSDK);
+          console.log('HyperliquidSDK.Hyperliquid:', typeof HyperliquidSDK?.Hyperliquid);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
